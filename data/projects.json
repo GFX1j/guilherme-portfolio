@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "American Burguer",
+    "description": "Site de hamburgueria com design moderno e responsivo. Desenvolvido com foco na experiência do usuário e otimização para conversões.",
+    "image": "./assets/images/projetos/americanburguer.jpg",
+    "technologies": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    "category": "website",
+    "status": "completed",
+    "date": "2024",
+    "links": {
+      "live": "https://americanburguer.site/",
+      "github": ""
+    },
+    "featured": true,
+    "highlights": [
+      "Design responsivo e moderno",
+      "Otimizado para conversões",
+      "Interface intuitiva",
+      "Performance otimizada"
+    ]
+  }
+]

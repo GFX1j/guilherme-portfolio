@@ -1,0 +1,370 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .name {
+        font-size: 5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.75rem;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+        padding: 0 1.5rem;
+    }
+    
+    .header .container {
+        padding: 0 1.5rem;
+    }
+    
+    .nav {
+        gap: 1.5rem;
+    }
+    
+    .name {
+        font-size: 3.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .quick-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .action-btn {
+        min-width: 200px;
+        text-align: center;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+        padding: 0 1rem;
+    }
+    
+    .header {
+        padding: 1rem 0;
+    }
+    
+    .header .container {
+        padding: 0 1rem;
+    }
+    
+    /* Mobile Navigation */
+    .nav {
+        position: fixed;
+        top: -100%; /* Mudança: esconder o menu por padrão */
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        transition: top 0.3s ease;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0; /* Adicionar opacidade para transição suave */
+        visibility: hidden; /* Esconder completamente */
+    }
+    
+    .nav.active {
+        top: 100%; /* Quando ativo, aparece abaixo do header */
+        opacity: 1; /* Torna visível */
+        visibility: visible; /* Mostra o elemento */
+        transform: translateY(0);
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* Profile Section */
+    .main-content {
+        padding: 5rem 0 2rem;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+    
+    .subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+    }
+    
+    .social-links {
+        margin-bottom: 2rem;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .social-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .header .container {
+        padding: 0 0.75rem;
+    }
+    
+    .logo a {
+        font-size: 1rem;
+    }
+    
+    .name {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .social-links {
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .action-btn {
+        padding: 0.65rem 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 374px) {
+    .name {
+        font-size: 1.75rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .action-btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.75rem;
+        min-width: 150px;
+    }
+}
+
+/* ==========================================================================
+   LANDSCAPE ORIENTATION (Mobile)
+   ========================================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .main-content {
+        padding: 2rem 0 1rem;
+        min-height: auto;
+    }
+    
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .name {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .social-links {
+        margin-bottom: 1rem;
+    }
+    
+    .header {
+        padding: 0.75rem 0;
+    }
+}
+
+/* ==========================================================================
+   HIGH DPI DISPLAYS
+   ========================================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+    #constellation,
+    .mobile-menu-btn,
+    .social-links {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .header {
+        position: static;
+        background: none;
+        backdrop-filter: none;
+    }
+    
+    .main-content {
+        padding: 2rem 0;
+    }
+    
+    .name,
+    .subtitle {
+        color: black !important;
+    }
+}
+
+/* ==========================================================================
+   DARK MODE PREFERENCES
+   ========================================================================== */
+
+@media (prefers-color-scheme: light) {
+    /* Se você quiser oferecer um tema claro opcional */
+    .light-theme {
+        background: #ffffff;
+        color: #0a0a0a;
+    }
+    
+    .light-theme .header {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+    .light-theme .name {
+        background: linear-gradient(135deg, #0a0a0a, rgba(10, 10, 10, 0.8));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-image {
+        transition: none;
+    }
+    
+    .social-link {
+        transition: none;
+    }
+    
+    .action-btn {
+        transition: none;
+    }
+    
+    .nav-link {
+        transition: none;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+@media (any-hover: none) {
+    .social-link:focus,
+    .action-btn:focus,
+    .nav-link:focus {
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+    }
+}
+
+/* ==========================================================================
+   TOUCH DEVICES
+   ========================================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    .social-link:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .social-link:active {
+        transform: scale(0.95);
+    }
+    
+    .action-btn:hover {
+        box-shadow: none;
+    }
+    
+    .action-btn:active {
+        transform: scale(0.98);
+    }
+}
