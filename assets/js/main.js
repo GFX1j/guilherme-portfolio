@@ -460,4 +460,22 @@ if ('serviceWorker' in navigator) {
                 console.log('Falha ao registrar SW:', error);
             });
     });
+    // Desabilita botão direito
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// Desabilita teclas de desenvolvedor
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+        (e.ctrlKey && e.shiftKey && e.key === 'J') || 
+        (e.ctrlKey && e.key === 'U')) { 
+        e.preventDefault(); 
+    } 
+});
+    
 }
+
+
+
